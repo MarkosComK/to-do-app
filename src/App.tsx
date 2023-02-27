@@ -1,4 +1,6 @@
 import { GlobalStyle } from "./styles/globalStyles";
+import * as S from './index'
+import InputField from "./components/inputfield";
 
 // TypesCript explicit declaration of variable types
 let name: string
@@ -41,12 +43,45 @@ function printName(name: string){
 }
 printName('Markos')
 
-function App() {
+type X = {
+  a: string,
+  b: number
+}
+type Y = X &{
+  c: string,
+  d: number
+}
+// the syntax (Y = X &) makes Y be like
+// type Y ={
+//   a: string,
+//   b: number,
+//   c: string,
+//   d: number
+// }
+// same thing can be done using interface for ex
+interface PersonI {
+  name: string,
+  age?: number
+}
+
+interface Guy extends PersonI{
+  profession: string
+}
+// the code above makes Guy had name: string, age?: number, profession: string
+let y: Y ={
+  c: 'string',
+  d: 23,
+  a: 'markos',
+  b: 23
+}
+
+const App:React.FC = () => {
   return (
-    <div>
+    <S.App>
       <GlobalStyle />
-      <h1>ola mundo</h1>
-    </div>
+      <header>Taskify</header>
+      <InputField />
+    </S.App>
   );
 }
 

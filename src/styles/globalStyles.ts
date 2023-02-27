@@ -6,5 +6,8 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    body{
+        background-color: #2f74c0;
+    }
 
 `
