@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const InputField = styled.div`
-form {
+    form {
     display: flex;
     width: 95%;
     position: relative;
     align-items: center;
 }
-
 input{
     width: 100%;
     border-radius: 50px;

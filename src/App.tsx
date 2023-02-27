@@ -1,16 +1,13 @@
 import React from 'react';
+import InputField  from './components/inputfield/index';
 import { GlobalStyle } from './styles/globalStyles';
-import * as S from './index'
-import InputField from './components/inputfield';
-
 
 const App:React.FC = () => {
   return (
-    <S.App>
+    <div>
       <GlobalStyle />
-      <header>Taskify</header>
       <InputField />
-    </S.App>
+    </div>
   );
 }
 
