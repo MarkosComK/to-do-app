@@ -6,6 +6,7 @@ const App:React.FC = () => {
   return (
     <div>
       <GlobalStyle />
+      <header>Taskify</header>
       <InputField />
     </div>
   );
